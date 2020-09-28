@@ -149,7 +149,7 @@ public class SM4Utils
     }
  
     public static void main(String[] args) throws UnsupportedEncodingException {
-        String plainText ="ssda撒了ii&$$^##)*&6223';.,[]";
+        String plainText ="张三李四";
         SM4Utils sm4 = new SM4Utils();
         sm4.secretKey = "12H5BAA6HIH42GJZ";
         sm4.iv = "";
@@ -159,7 +159,7 @@ public class SM4Utils
         System.out.println("密文: " + cipherText);
         System.out.println("");
  
-        plainText = sm4.decryptData_ECB("uJongmY/qV0HK4TLgRmXHA==");
+        plainText = sm4.decryptData_ECB(cipherText);
         System.out.println("明文: " + plainText);
         System.out.println("");
  
